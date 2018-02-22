@@ -25,22 +25,22 @@ public class Rocket implements SpaceShip {
         currentWeight = 0;
         cargoWeight = 0;
         cargoLimit = 0;
-     //   rocketStatus = 2;       //not loaded
         explosionRate = 0.0;
         crashRate = 0.0;
         explosionRate = 0.0;
         crashChance = 0.0;
         explodeChance = 0.0;
-        random = new Random().nextDouble();     //randome double between 0 - 0.99
     }
     /*launch and land methods in the Rocket class always returns true.
       When U1 and U2 classes extend the Rocket class they will override these methods
       to return true or false based on the actual probability of each type.*/
     public boolean launch() {
+        System.out.println("main_launch");
         return true;
     }
 
     public boolean land() {
+        System.out.println("main_land");
         return true;
     }
 

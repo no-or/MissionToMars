@@ -13,16 +13,20 @@ public class RocketU1 extends Rocket {
     }
 
     //overriding the launch method to get the result based on the appropriate parameters
-    @Override
     public boolean launch() {
-        this.explodeChance = this.explosionRate * ((double)this.cargoWeight /(double)this.cargoLimit);
-        return (this.explodeChance < this.random);
+        this.explodeChance = this.explosionRate * ((double)cargoWeight /(double)cargoLimit);
+        System.out.println("explodeChance is :" + this.explodeChance);
+        System.out.println(Math.random());
+        System.out.println((this.explodeChance < Math.random()));
+        return (this.explodeChance > Math.random());
     }
 
     //overriding the launch method to get the result based on the appropriate parameters
-    @Override
     public boolean land(){
         this.crashChance = this.crashRate * ((double)this.cargoWeight /(double)this.cargoLimit);
-        return (this.crashChance < this.random);
+        System.out.println("crashChance is :" + this.crashChance);
+        System.out.println(Math.random());
+        System.out.println((this.crashChance < Math.random()));
+        return (this.crashChance > this.random);
     }
 }
